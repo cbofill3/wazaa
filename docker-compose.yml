@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    python-server:
+      container_name: python-server
+      # Crea la imagen con el archivo Dockerfile de esta misma carpeta
+      image: python-server
+      restart: always
+      volumes:
+        - ./app:/home/jonnattan/app
+        - ./.aws_credentials:/home/jonnattan/.aws/credentials
+      ports:
+        - "8085:8085"
+      env_file:
+      - .env
+      networks:
+        - db-net
+networks:
+  db-net:

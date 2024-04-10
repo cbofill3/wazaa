@@ -1,0 +1,8 @@
+# Ignore everything
+**
+!requirements.txt
+!./app/run.sh
+!./app/http-server.py
+!./app/utilwaza.py
+!./app/otp.py
+!./app/utilchatbot.py
